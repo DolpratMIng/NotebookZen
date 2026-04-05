@@ -9,9 +9,20 @@ import {
 
 import Image from "next/image";
 
-export default function CardSmall({ src, name, title, description }) {
+type CardSmallProps = {
+  src: string;
+  name: string;
+  title: string;
+  description: string;
+};
+export default function CardSmall({
+  src,
+  name,
+  title,
+  description,
+}: CardSmallProps) {
   return (
-    <Card size="sm" className="mx-auto w-full max-w-sm hover:bg-gray-700">
+    <Card className="mx-auto w-full max-w-sm hover:bg-gray-700">
       <CardHeader>
         <Image
           src={src}
