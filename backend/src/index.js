@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const prisma = require("../prismaClient");
 const webhookRoutes = require("./routes/webhooks/clerk");
+const chatRoutes = require("./routes/chat");
 const app = express();
 const port = 8000;
 const { requireAuth } = require("./middleware/auth");
@@ -103,6 +104,8 @@ app.get("/notesCount/:id", async (req, res) => {
 
   return res.json(noteCount);
 });
+
+app.use("/api", chatRoutes);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

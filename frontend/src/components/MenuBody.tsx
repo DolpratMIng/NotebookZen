@@ -25,7 +25,7 @@ export default function MenuBody() {
         </p>
       </div>
       {/*Cards section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-30 gap-y-10 h-full w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-30 gap-y-10 h-full w-full">
         <Link href="/create">
           <Card
             src="/createLogo.jpg"
@@ -52,6 +52,15 @@ export default function MenuBody() {
             description="Connect and links your ideas"
           />
         </div>
+
+        <Link href="/chat">
+          <Card
+            src="/mappingLogo.png"
+            name="chatLogo"
+            title="AI Chat"
+            description="Ask questions about your notes"
+          />
+        </Link>
       </div>
     </div>
   );
